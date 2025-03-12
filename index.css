@@ -1,0 +1,1917 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+            /* Base Styles for Navbar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#travelicon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link li {
+    position: relative;
+}
+
+.nav-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link i {
+    font-size: 1.2em;
+}
+
+/* Dropdown */
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropdown .dropbtn {
+    color: #ffffff;
+}
+
+.navbar .dropdown-content {
+    display: none;  /* Hidden by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Hide the checkbox input */
+}
+
+.menu-icon {
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Hide the menu icon by default */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile and Tablet */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    /* Navigation Links - Initially hidden */
+    .nav-link {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    /* Nav links styling for mobile */
+    .nav-link li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link a {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    /* When the menu icon is clicked (checkbox is checked), show the nav links */
+    .menu-toggle:checked + .menu-icon + .nav-link {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+}
+
+/* For Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-link {
+        display: flex;
+        gap: 20px;
+    }
+
+    .menu-icon {
+        display: none; /* Hide the hamburger menu on tablets */
+    }
+}
+
+/* For Desktop */
+@media (min-width: 1024px) {
+    .nav-link {
+        display: flex;
+        gap: 20px;
+    }
+
+    .menu-icon {
+        display: none; /* Hide the hamburger menu on desktop */
+    }
+
+    .navbar {
+        padding: 15px 30px;
+    }
+}
+/* For Laptop/Desktop Screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    /* Position the nav links on the right side */
+    .nav-link {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin-left: 800px; /* This will push the nav links to the right side */
+    }
+
+    .nav-link li {
+        position: relative;
+    }
+
+    .nav-link a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .nav-link i {
+        font-size: 1.2em;
+    }
+
+    .menu-icon {
+        display: none; /* Hide the hamburger menu icon on laptop/desktop */
+    }
+}
+
+
+/* Base Styles for Header */
+header {
+    position: relative;
+    z-index: 5;
+    height: 100vh; /* Full viewport height */
+    background-image: url('images/mountaineeimg.jpg'); /* Replace with your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
+    border-radius: 10px;
+}
+
+.headerh2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+.headerh1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: #ff6347;
+}
+
+/* Mobile Styles (Small Screens) */
+@media (max-width: 767px) {
+    header {
+        height: 80vh; /* Reduced height for mobile */
+    }
+
+    .headerh2 {
+        font-size: 1.8em; /* Smaller font for header */
+    }
+
+    .headerh1 {
+        font-size: 2.5em; /* Smaller font for main heading */
+    }
+
+    .line {
+        width: 40px; /* Smaller line */
+        height: 3px;
+    }
+
+    .button {
+        padding: 12px 25px; /* Smaller button */
+        font-size: 1em;
+    }
+
+    .header-content {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+}
+
+/* Tablet Styles (Medium Screens) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        height: 90vh; /* Adjust height for tablets */
+    }
+
+    .headerh2 {
+        font-size: 2em; /* Adjust header font */
+    }
+
+    .headerh1 {
+        font-size: 3em; /* Adjust main heading font */
+    }
+
+    .line {
+        width: 50px; /* Slightly smaller line */
+        height: 3px;
+    }
+
+    .button {
+        padding: 14px 28px; /* Adjust button padding */
+        font-size: 1.1em;
+    }
+
+    .header-content {
+        padding: 20px; /* Increase padding for tablets */
+    }
+}
+
+/* Desktop Styles (Large Screens) */
+@media (min-width: 1024px) {
+    header {
+        height: 100vh; /* Full height for desktop */
+    }
+
+    .headerh2 {
+        font-size: 2.5em; /* Larger font for header */
+    }
+
+    .headerh1 {
+        font-size: 4em; /* Larger font for main heading */
+    }
+
+    .line {
+        width: 60px; /* Larger line */
+        height: 3px;
+    }
+
+    .button {
+        padding: 15px 30px; /* Larger button */
+        font-size: 1.2em;
+    }
+
+    .header-content {
+        padding: 25px; /* Larger padding for desktop */
+    }
+}
+/* Base Styles */
+#one {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.onep {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between; /* Align divs in a row with equal spacing */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Space between items */
+}
+
+.addition {
+    flex: 1; /* Ensures equal width for all divs */
+    max-width: 20%; /* Set each div to occupy 20% of the container */
+    box-sizing: border-box;
+}
+
+.addition img {
+    width: 100%; /* Make the image take full width of its container */
+    height: 300px; /* Set the same height for all images */
+    object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .onep {
+        font-size: 1.5em;
+    }
+
+    .p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center;
+    }
+
+    .addition {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .addition img {
+        height: 200px; /* Adjust height for mobile */
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .onep {
+        font-size: 1.8em;
+    }
+
+    .p {
+        font-size: 1.1em;
+        margin-bottom: 25px;
+    }
+
+    .main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .addition {
+        flex: 1 1 calc(45% - 20px); /* 2 items per row on tablet */
+        max-width: calc(45% - 20px);
+    }
+
+    .addition img {
+        height: 250px; /* Adjust height for images on tablet */
+    }
+}
+
+/* Desktop Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .onep {
+        font-size: 2.5em;
+    }
+
+    .p {
+        font-size: 1.3em;
+        margin-bottom: 30px;
+    }
+
+    .main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .addition {
+        flex: 1 1 calc(20% - 20px); /* 5 items per row */
+        max-width: calc(20% - 20px);
+    }
+
+    .addition img {
+        height: 300px; /* Set consistent height for desktop */
+    }
+}
+/* Base Styles for #famousmain */
+#famousmain {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.famoush4 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.famoush4 bold {
+    color: red;
+}
+
+.pp {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.grand {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+    justify-content: space-between; /* Space out the items evenly */
+    gap: 20px; /* Add space between items */
+}
+
+/* Styles for each .son div */
+.son {
+    flex: 1 1 calc(25% - 20px); /* Take up 25% of the container on desktop */
+    max-width: calc(25% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.son:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.son img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
+}
+
+.son h2 {
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+.son i {
+    color: gold;
+}
+
+.son p {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.son button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.son button:hover {
+    background-color: #ff6347;
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .famoush4 {
+        font-size: 1.8em;
+    }
+
+    .pp {
+        font-size: 1em;
+    }
+
+    .grand {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center;
+    }
+
+    .son {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+        margin-bottom: 20px; /* Space between items */
+    }
+
+    .son img {
+        height: 200px; /* Adjust image height for mobile */
+    }
+
+    .son h2 {
+        font-size: 1.5em;
+    }
+
+    .son p {
+        font-size: 0.9em;
+    }
+
+    .son button {
+        font-size: 1em;
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .famoush4 {
+        font-size: 2em;
+    }
+
+    .pp {
+        font-size: 1.1em;
+    }
+
+    .grand {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .son {
+        flex: 1 1 calc(45% - 20px); /* 2 items per row on tablet */
+        max-width: calc(45% - 20px);
+    }
+
+    .son img {
+        height: 250px; /* Adjust image height for tablet */
+    }
+
+    .son h2 {
+        font-size: 1.7em;
+    }
+
+    .son p {
+        font-size: 1em;
+    }
+
+    .son button {
+        font-size: 1.1em;
+    }
+}
+
+/* Desktop Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .famoush4 {
+        font-size: 2.5em;
+    }
+
+    .pp {
+        font-size: 1.2em;
+    }
+
+    .grand {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .son {
+        flex: 1 1 calc(25% - 20px); /* 4 items per row */
+        max-width: calc(25% - 20px);
+    }
+
+    .son img {
+        height: 200px; /* Set a consistent image height on desktop */
+    }
+
+    .son h2 {
+        font-size: 2em;
+    }
+
+    .son p {
+        font-size: 1.1em;
+    }
+
+    .son button {
+        font-size: 1.2em;
+    }
+}
+/* Base styles for the #two section */
+#two {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.twoh4 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.twoh4 bold {
+    color: red;
+}
+
+.pp {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.child {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.child:hover {
+    transform: translateY(-10px);
+}
+
+.child img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+}
+
+/* Discount banner */
+#trans {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Details section inside each child */
+.details {
+    padding: 15px;
+    text-align: left;
+}
+
+.detaildiv h5 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#span {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+#button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#button:hover {
+    background-color: #ff6347;
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .twoh4 {
+        font-size: 2em;
+    }
+
+    .pp {
+        font-size: 1em;
+    }
+
+    .parent {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center;
+    }
+
+    .child {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+        margin-bottom: 20px; /* Space between items */
+    }
+
+    .child img {
+        height: 180px; /* Adjust image height for mobile */
+    }
+
+    .details {
+        padding: 10px;
+    }
+
+    .detaildiv h5 {
+        font-size: 1.3em;
+    }
+
+    #span {
+        font-size: 1em;
+    }
+
+    #button {
+        font-size: 1em;
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .twoh4 {
+        font-size: 2.2em;
+    }
+
+    .pp {
+        font-size: 1.1em;
+    }
+
+    .parent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .child {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablet */
+        max-width: calc(50% - 20px);
+    }
+
+    .child img {
+        height: 220px; /* Adjust image height for tablet */
+    }
+
+    .details {
+        padding: 12px;
+    }
+
+    .detaildiv h5 {
+        font-size: 1.4em;
+    }
+
+    #span {
+        font-size: 1.1em;
+    }
+
+    #button {
+        font-size: 1.1em;
+    }
+}
+
+/* Desktop Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .twoh4 {
+        font-size: 2.5em;
+    }
+
+    .pp {
+        font-size: 1.2em;
+    }
+
+    .parent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .child {
+        flex: 1 1 calc(25% - 20px); /* 4 items per row */
+        max-width: calc(25% - 20px);
+    }
+
+    .child img {
+        height: 250px; /* Set consistent image height on desktop */
+    }
+
+    .details {
+        padding: 15px;
+    }
+
+    .detaildiv h5 {
+        font-size: 1.6em;
+    }
+
+    #span {
+        font-size: 1.2em;
+    }
+
+    #button {
+        font-size: 1.2em;
+    }
+}
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    /* Section Title and Paragraph */
+    .twoh4 {
+        font-size: 2em; /* Adjust font size for mobile */
+        margin-bottom: 15px;
+    }
+
+    .pp {
+        font-size: 1em; /* Adjust paragraph font size */
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    /* Parent Container */
+    .parent {
+        flex-direction: column; /* Stack the child elements vertically */
+        align-items: center; /* Center align the children */
+        gap: 20px; /* Space between the child items */
+    }
+
+    /* Child Elements (Individual Deals) */
+    .child {
+        flex: 1 1 100%; /* Take up 100% width */
+        max-width: 100%; /* Ensure the child elements take up the entire width */
+        margin-bottom: 20px; /* Space between child items */
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .child:hover {
+        transform: translateY(-10px); /* Slight lift effect on hover */
+    }
+
+    /* Image Styling */
+    .child img {
+        width: 100%; /* Ensure images take up full width */
+        height: 200px; /* Set fixed height for images */
+        object-fit: cover; /* Ensure images maintain aspect ratio without distortion */
+    }
+
+    /* Discount Banner */
+    #trans {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+        color: white;
+        padding: 5px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* Details Container */
+    .details {
+        padding: 12px;
+        text-align: left;
+    }
+
+    .detaildiv h5 {
+        font-size: 1.4em; /* Adjust heading size */
+        margin: 10px 0;
+    }
+
+    #span {
+        font-size: 1em; /* Adjust span size */
+        color: #777;
+        margin-bottom: 15px;
+    }
+
+    /* Button Styling */
+    #button {
+        background-color: #ff7f50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+
+    #button:hover {
+        background-color: #ff6347; /* Change color on hover */
+    }
+}
+/* General Styles */
+#three {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.wrapper-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.threeh4 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.threep {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.on-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual Container Style */
+.in-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.in-container i {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.in-container strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.in-containerp {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .on-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .threeh4 {
+        font-size: 28px;
+    }
+
+    .threep {
+        font-size: 16px;
+    }
+
+    .in-container {
+        padding: 15px;
+    }
+
+    .in-container i {
+        font-size: 36px;
+    }
+
+    .in-container strong {
+        font-size: 20px;
+    }
+
+    .in-containerp {
+        font-size: 12px;
+    }
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .on-container {
+        grid-template-columns: 1fr;
+    }
+
+    .threeh4 {
+        font-size: 24px;
+    }
+
+    .threep {
+        font-size: 14px;
+    }
+
+    .in-container {
+        padding: 10px;
+    }
+
+    .in-container i {
+        font-size: 30px;
+    }
+
+    .in-container strong {
+        font-size: 18px;
+    }
+
+    .in-containerp {
+        font-size: 12px;
+    }
+}
+
+/* For Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .on-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .threeh4 {
+        font-size: 36px;
+    }
+
+    .threep {
+        font-size: 18px;
+    }
+
+    .in-container i {
+        font-size: 40px;
+    }
+
+    .in-container strong {
+        font-size: 22px;
+    }
+
+    .in-containerp {
+        font-size: 14px;
+    }
+}
+/* General Styles */
+.team {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.teamh4 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.lap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.mob {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.mob img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.mob-in {
+    padding: 20px;
+}
+
+.mobh1 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.mobp {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .teamh4 {
+        font-size: 28px;
+    }
+
+    .lap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mob img {
+        height: 200px;
+    }
+
+    .mobh1 {
+        font-size: 20px;
+    }
+
+    .mobp {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .teamh4 {
+        font-size: 24px;
+    }
+
+    .lap {
+        grid-template-columns: 1fr;
+    }
+
+    .mob img {
+        height: 180px;
+    }
+
+    .mobh1 {
+        font-size: 18px;
+    }
+
+    .mobp {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+}
+
+/* For Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .teamh4 {
+        font-size: 36px;
+    }
+
+    .lap {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .mob img {
+        height: 250px;
+    }
+
+    .mobh1 {
+        font-size: 24px;
+    }
+
+    .mobp {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+/* General Styles */
+.customer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.customerh4 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.review {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.review-in {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review-in img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.review-span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.stars i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Button Styling (optional if you add a button) */
+.btn {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .customerh4 {
+        font-size: 28px;
+    }
+
+    .review {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-in img {
+        height: 180px;
+    }
+
+    .review-span {
+        font-size: 18px;
+    }
+
+    .review-p {
+        font-size: 13px;
+    }
+
+    .stars i {
+        font-size: 18px;
+    }
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .customerh4 {
+        font-size: 24px;
+    }
+
+    .review {
+        grid-template-columns: 1fr;
+    }
+
+    .review-in img {
+        height: 150px;
+    }
+
+    .review-span {
+        font-size: 16px;
+    }
+
+    .review-p {
+        font-size: 12px;
+    }
+
+    .stars i {
+        font-size: 16px;
+    }
+}
+
+/* For Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .customerh4 {
+        font-size: 36px;
+    }
+
+    .review {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .review-in img {
+        height: 200px;
+    }
+
+    .review-span {
+        font-size: 20px;
+    }
+
+    .review-p {
+        font-size: 14px;
+    }
+
+    .stars i {
+        font-size: 22px;
+    }
+}
+/* General Styles */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.about-text small {
+    font-size: 14px;
+    color: red;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-checklist {
+    margin-top: 20px;
+}
+
+.about-checklist label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.about-checklist input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: darkred;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 400px;
+    }
+
+    .about-text {
+        padding-left: 0;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-checklist label {
+        font-size: 13px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .about {
+        padding: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-checklist label {
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+/* For Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .about-img img {
+        max-width: 500px;
+    }
+
+    .about-text h2 {
+        font-size: 36px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-checklist label {
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 14px 22px;
+    }
+}
+
+
+
+
+/* Subscribe Section */
+.subscribe {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.subscribe .section_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subscribe .section__header {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.subscribe__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.subscribe__form input {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.subscribe__form button {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe__form button:hover {
+    background-color: darkred;
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .subscribe .section__header {
+        font-size: 28px;
+    }
+
+    .subscribe__form input {
+        width: 250px;
+    }
+
+  
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .subscribe .section__header {
+        font-size: 24px;
+    }
+
+    .subscribe__form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .subscribe__form input {
+        width: 100%;
+        max-width: 350px;
+    }
+
+ 
+}
+
+/* For Large Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .subscribe__form input {
+        width: 400px;
+    }
+
+   
+}
+
+/* General Footer Styles */
+footer {
+    background-color: #131313;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.footer {
+    flex: 1;
+    margin: 20px;
+}
+
+.footerh3 {
+    color: red;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Social Media Icons */
+ul.socialul li i {
+    font-size: 26px;
+}
+
+/* Responsive Media Queries */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    footer {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footerh3 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+
+    ul li i {
+        font-size: 20px;
+    }
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    footer {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footerh3 {
+        font-size: 18px;
+    }
+
+    ul li {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    ul li i {
+        font-size: 18px;
+    }
+}
+
+/* For Large Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    footer {
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .footer {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .footerh3 {
+        font-size: 24px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    ul li i {
+        font-size: 26px;
+    }
+}
+/* General Footer Styles */
+footer {
+    background-color: #0e0e0e;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.footer {
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+}
+
+.footerh3 {
+    color: red;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: left; /* Ensures header aligns to the left */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensures the list takes full width of its container */
+}
+
+ul li {
+    margin: 5px 0;
+    text-align: left; /* Aligns list items to the left */
+}
+
+ul li i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Social Media Icons */
+ul.socialul li i {
+    font-size: 26px;
+}
+
+/* Responsive Media Queries */
+
+/* For Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    footer {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footerh3 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+
+    ul li i {
+        font-size: 20px;
+    }
+}
+
+/* For Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    footer {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footerh3 {
+        font-size: 18px;
+    }
+
+    ul li {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    ul li i {
+        font-size: 18px;
+    }
+}
+
+/* For Large Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    footer {
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .footer {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .footerh3 {
+        font-size: 24px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    ul li i {
+        font-size: 26px;
+    }
+}
+
